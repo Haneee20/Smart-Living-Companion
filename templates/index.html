@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Living Companion</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart Living Companion</h1>
+        <p>Smart Room Monitoring Dashboard</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Temperature</h3>
+                <h2 id="temperature">-- °C</h2>
+            </div>
+
+            <div class="card">
+                <h3>Humidity</h3>
+                <h2 id="humidity">-- %</h2>
+            </div>
+
+            <div class="card">
+                <h3>Motion Status</h3>
+                <h2 id="motion">Waiting...</h2>
+            </div>
+
+            <div class="card">
+                <h3>LED Control</h3>
+                <button id="ledOn">Turn ON</button>
+                <button id="ledOff">Turn OFF</button>
+                <p id="ledStatus">LED is OFF</p>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>
